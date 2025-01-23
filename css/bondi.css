@@ -1,0 +1,247 @@
+/************ Root ************/
+:root {
+    --primary: #33d1cc;
+    --secondry: #19283f;
+    --third: #ff3150;
+    --fourth: #ffc400;
+    --fifth: #eff7fa;
+}
+
+/************ Fonts ************/
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.ttf');
+}
+
+/************ Global ************/
+body {
+    font-family: 'Roboto';
+}
+
+a {
+    text-decoration: none;
+}
+
+/************ Style ************/
+.btn-love {
+    background-color: var(--third);
+    color: var(--fourth);
+    padding: .5rem 1rem;
+}
+
+.bg-blocks {
+    background-color: var(--fifth);
+}
+
+.blocks .title {
+    padding: 0 15px;
+}
+
+.blocks .title::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 2px;
+    background-color: var(--primary);
+}
+
+/************ Navbar ************/
+.navbar {
+    background-color: var(--secondry);
+}
+
+.navbar .navbar-toggler {
+    padding: 5px 10px;
+    border-color: white;
+    border-width: 2px;
+}
+
+.navbar .navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar .navbar-toggler[aria-expanded="true"] {
+    border-color: var(--primary);
+}
+
+.navbar .navbar-toggler i {
+    color: white;
+    font-size: 25px;
+}
+
+.navbar .navbar-nav .nav-item .nav-link {
+    color: white;
+}
+
+.navbar .navbar-nav .nav-item .nav-link.active,
+.navbar .navbar-nav .nav-item .nav-link:hover {
+    color: var(--primary);
+}
+
+.navbar .search {
+    border-left: 1px solid var(--primary);
+}
+
+.navbar .search i {
+    color: var(--primary);
+    cursor: pointer;
+}
+
+.navbar .auth a {
+    display: block;
+    text-align: center;
+}
+
+/************ Landing ************/
+.landing {
+    background-color: var(--secondry);
+    height: calc(100vh - 72px);
+}
+
+/************ Features ************/
+.features .feature .icons {
+    height: 200px;
+}
+
+.features .feature .icons i {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.features .feature .icons i:first-of-type {
+    font-size: 12rem;
+    color: var(--fifth);
+}
+
+.features .feature .icons i:last-of-type {
+    color: var(--primary);
+}
+
+.features .feature h4 {
+    color: var(--fourth);
+}
+
+/************ Workr ************/
+.works ul li {
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.works ul li:not(.active):hover {
+    color: var(--third);
+}
+
+.works ul .active {
+    background-color: var(--third);
+    color: var(--fourth);
+}
+
+.works .work {
+    padding: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.works .work::before {
+    content: attr(data-work);
+    position: absolute;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    background-color: rgba(51, 209, 204, .8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--secondry);
+    transform: translateX(calc(-100% - 5px));
+    transition: .3s ease-in-out;
+}
+
+.works .work:hover::before {
+    transform: translateX(0);
+}
+
+/************ Stuffs ************/
+.stuffs .description {
+    max-width: 500px;
+}
+
+/************ Teams ************/
+.teams .team h4 {
+    background-color: var(--primary);
+}
+
+/************ Projects ************/
+.projects {
+    background-color: var(--secondry);
+}
+
+/************ Subscribes ************/
+.subscribes {
+    background-color: var(--fourth);
+}
+
+.subscribes input {
+    border: none;
+    border-bottom: 1px solid white;
+    background: none;
+}
+
+.subscribes input:focus {
+    outline: none;
+}
+
+.subscribes input::placeholder {
+    color: white;
+}
+
+.subscribes button {
+    background-color: var(--secondry);
+    color: var(--fourth);
+}
+
+/************ Footer ************/
+.footer {
+    background-color: var(--secondry);
+}
+
+@media (max-width: 767px) {
+    .footer .foot.links {
+        margin-top: 25px;
+    }
+}
+
+.footer .foot .copyright a:first-of-type {
+    color: var(--primary);
+}
+
+.footer .foot .copyright a:last-of-type {
+    color: var(--fourth);
+}
+
+.footer .foot .social a i {
+    font-size: 25px;
+}
+
+.footer .foot .social a .fa-facebook {
+    color: #1877f2;
+}
+
+.footer .foot .social a .fa-twitter {
+    color: #1da1f2;
+}
+
+.footer .foot .social a .fa-linkedin {
+    color: #0077b5;
+}
+
+.footer .foot .social a .fa-youtube {
+    color: #ff0000;
+}
